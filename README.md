@@ -10,3 +10,5 @@ CSSonly is a pure CSS Framework to creaty easily responsive websites. Simply inc
 - Pagination
 - Media
 - Colors
+- Cards
+- Borders
