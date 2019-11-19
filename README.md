@@ -12,3 +12,4 @@ CSSonly is a pure CSS Framework to help you easily creating responsive websites.
 - Colors
 - Cards
 - Borders
+- Breadcrumb
