@@ -464,7 +464,8 @@ ol {
 }
 
 .nav .menu-btn:checked~.menu {
- max-height: 500px
+ max-height: 500px;
+overflow-y:auto
 }
 
 nav .menu-btn:checked~.nav-wrapper .menu-icon .navicon {
@@ -677,10 +678,21 @@ input[type=reset] {
 
 /*Card Ende*/
 
-@media only screen and (min-width: 48em) {
- .mr-grid {
+/*Breadcrumb*/
 
- }
+.mr-breadcrumb {display:inline-flex; font-size: 1rem; list-style:none;}
+.mr-breadcrumb li {padding-right:.5rem}
+.mr-breadcrumb li:after {padding-left:.5rem;content: ' \003E';}
+.mr-breadcrumb li:last-child::after {
+  content: '';
+}
+.mr-breadcrumb a {text-decoration:none}
+.mr-breadcrumb .active {background-color:initial}
+
+
+/*Breadcrumb Ende*/
+
+@media only screen and (min-width: 36em) {
 
  /*Grid*/
 
@@ -699,6 +711,79 @@ input[type=reset] {
  [class*='col-']:last-child {
  margin-right: 0
  }
+
+/*Grid Ende*/
+
+}
+
+@media only screen and (min-width: 48em) {
+ .mr-grid {
+
+
+ .col-s-1 {
+ flex-basis: 8.33%;
+ max-width: 8.33%
+ }
+
+ .col-s-2 {
+ flex-basis: 16.6%;
+ max-width: 16.66%
+ }
+
+ .col-s-3 {
+ flex-basis: 25%;
+ max-width: 25%
+ }
+
+ .col-s-4 {
+ flex-basis: 33.33%;
+ max-width: 33.33%
+ }
+
+ .col-s-5 {
+ flex-basis: 41.67%;
+ max-width: 41.67%
+ }
+
+ .col-s-6 {
+ flex-basis: 50%;
+ max-width: 50%
+ }
+
+ .col-s-7 {
+ flex-basis: 58.33%;
+ max-width: 58.33%
+ }
+
+ .col-s-8 {
+ flex-basis: 66.67%;
+ max-width: 66.67%
+ }
+
+ .col-s-9 {
+ flex-basis: 75%;
+ max-width: 75%
+ }
+
+ .col-s-10 {
+ flex-basis: 83.33%;
+ max-width: 83.33%
+ }
+
+ .col-s-11 {
+ flex-basis: 91.67%;
+ max-width: 91.67%
+ }
+
+ .col-s-12 {
+ flex-basis: 100%;
+ max-width: 100%
+ }
+
+ }
+
+ /*Grid*/
+
 
  .col-m-1 {
  flex-basis: 8.33%;
