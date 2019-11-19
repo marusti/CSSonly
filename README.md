@@ -16,3 +16,6 @@ CSSonly is a pure CSS Framework to help you easily creating responsive websites.
 - Typography
 
 ## Getting started
+Add the cssonly.css or cssonly.min.css to the head section of your HTML file.
+
+Done!
