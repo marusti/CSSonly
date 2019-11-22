@@ -692,6 +692,68 @@ input[type=reset] {
 
 /*Breadcrumb Ende*/
 
+/*Accordion*/
+
+.mr-accordion {border: 1px solid var(--main-color);}
+
+.accordion-tab {
+
+/*  position: relative;*/
+  margin-bottom: 1px;
+ /* width: 100%;*/
+  overflow: hidden;
+}
+
+.accordion-tab:last-child {margin-bottom:0}
+
+.mr-accordion input {
+display: none
+}
+
+.mr-accordion label {
+  display: flex;
+  padding: .625rem 0 .625rem 1rem;
+  background: var(--main-color);
+  cursor: pointer;
+color:#fff
+}
+
+.accordion-content {
+  display: -webkit-flex;
+  display: flex;
+  max-height: 0;
+  overflow: hidden;
+  background: #fff;
+  -webkit-transition: max-height .35s;
+  -o-transition: max-height .35s;
+  transition: max-height .35s;
+}
+
+.accordion-content span {
+  padding: 1rem;
+}
+
+.mr-accordion input:checked ~ .accordion-content {
+  max-height: 10em;
+}
+
+.mr-accordion label::after {
+margin: 0 1rem 0 auto;
+  -webkit-transition: all .35s;
+  -o-transition: all .35s;
+  transition: all .35s;
+}
+
+.mr-accordion input[type=radio] + label::after {
+  content: "+";
+}
+
+.mr-accordion input[type=radio]:checked + label::after {
+  content: "-";
+}
+
+/*Accordion Ende*/
+
 @media only screen and (min-width: 36em) {
 
  /*Grid*/
@@ -716,7 +778,9 @@ input[type=reset] {
 
 }
 
-@media only screen and (min-width: 48em) {
+
+@media only screen and (min-width: 36em) {
+
  .mr-grid { }
 
 
@@ -780,7 +844,12 @@ input[type=reset] {
  max-width: 100%
  }
 
- }
+
+}
+
+@media only screen and (min-width: 48em) {
+
+ 
 
  /*Grid*/
 
