@@ -2,17 +2,18 @@
 CSSonly is a pure CSS Framework to help you easily creating responsive websites. Simply include the css or min.css file into yout HTML file and you are ready to go.
 
 ## Whats included?
-- Grid
-- Menu
-- Buttons
-- Forms
-- Table
-- Pagination
-- Media
-- Colors
-- Cards
+- Accordion
 - Borders
 - Breadcrumb
+- Buttons
+- Cards
+- Colors
+- Forms
+- Grid
+- Media
+- Menu
+- Pagination
+- Table
 - Typography
 
 ## Getting started
