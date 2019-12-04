@@ -11,8 +11,9 @@ CSSonly is a pure CSS Framework to help you easily creating responsive websites.
 - Forms
 - Grid
 - Media
-- Menu
+- Multi-Level Navbar
 - Pagination
+- Slider
 - Table
 - Typography
 
