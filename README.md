@@ -1,5 +1,5 @@
 # CSSonly
-CSSonly is a pure CSS Framework to help you easily creating responsive websites. Simply include the css or min.css file into yout HTML file and you are ready to go.
+CSSonly is a pure CSS UI kit that lets you create responsive websites quickly and easily. Just paste the file .css or .min.css into your HTML file and you're ready to go.
 
 ## Whats included?
 - Accordion
