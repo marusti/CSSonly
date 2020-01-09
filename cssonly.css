@@ -4,6 +4,7 @@
   --main-color: #06c;
   --main-bg-color: #fff;
   --main-font: 'Lato', sans-serif;
+  --main-headings-font: 'Lato', sans-serif;
   --main-font-color: #333;
   --main-padding: .625rem;
   --main-margin: .625rem;
@@ -104,6 +105,12 @@ body {
 }
 
 /*Colors Ende*/
+
+/*Typographie*/
+
+h1,h2,h3,h4,h5,h6,p,.text,ul,ol,dl,form,.mr-form,table,.mr-table,blockquote,pre,button,.mr-button,.card {margin-bottom: var(--main-margin)}
+
+/*Ende Typographie*/
 
 /*Border*/
 
@@ -225,7 +232,7 @@ body {
 /*Text*/
 
 .text {
-  padding: var(--main-padding) 0
+/*  padding: var(--main-padding) 0 */
 }
 
 .text-center {
@@ -272,9 +279,10 @@ body {
 
 h1,h2,h3,h4,h5,h6 {
   flex: 1 100%;
+  font-family: var(--main-headings-font);
   color: var(--main-color);
-  margin-bottom: .625rem;
-  margin-top: .625rem
+ /* margin-bottom: .625rem;*/
+ /* margin-top: .625rem */
 }
 
 h1 {
@@ -314,8 +322,8 @@ a:hover {
 
 .mr-table {
   width: 100%;
-  margin-top: 15px;
-  margin-bottom: 15px;
+ /* margin-top: 15px;
+  margin-bottom: 15px;*/
 
   table-layout: fixed
 }
@@ -397,8 +405,7 @@ ul,ol {
   overflow: hidden
 }
 
-.nav ul ul li a,
-.multi a {
+.nav ul ul li a, .multi {
   padding-left: 40px
 }
 
@@ -767,11 +774,11 @@ input[type=reset] {
 }
 
 .mr-accordion input[type=radio]+label::after {
-  content: "+";
+  content: "\002B";
 }
 
 .mr-accordion input[type=radio]:checked+label::after {
-  content: "-";
+  content: "\2212";
 }
 
 /*Accordion Ende*/
@@ -898,7 +905,7 @@ input[type=reset] {
 }
 
 .mr-tabs label::after {
-  content: "+";
+  content: "\002B";
   position: absolute;
   right: 0;
   width: 3em;
@@ -1187,7 +1194,8 @@ input[type=reset] {
 
   .sub-menu .multi {
     left: 100%;
-    top: 0
+    top: 0;
+padding-left:0
   }
 
   .nav .menu ul li {}
@@ -1233,12 +1241,18 @@ input[type=reset] {
     box-shadow: none
   }
 
-  .multi {
+/*.menu  .multi {
+    left: inherit;
+    top: inherit
+  }*/
+
+ .nav-vertical .menu .multi{
     left: inherit;
     top: inherit
   }
 
-  .nav-vertical .menu .sub-menu li a {
+
+  .nav-vertical .menu .sub-menu li a, .nav-vertical .menu .sub-menu .multi {
     padding-left: 3rem
   }
 
