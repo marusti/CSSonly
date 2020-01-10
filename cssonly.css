@@ -372,7 +372,7 @@ td {
  font-size: 1.2rem !important
 }
 
-.mr-button: last-child {margin-right: 0}
+.mr-button:last-child {margin-right: 0}
 
 .mr-button a {color: #fff;text-decoration: none}
 
