@@ -66,8 +66,6 @@ body {
  padding: var(--main-padding)
 }
 
-/*Grid Ende*/
-
 /*Colors*/
 
 .main-color {
@@ -106,133 +104,49 @@ body {
  color: #fff
 }
 
-/*Colors Ende*/
-
 /*Typographie*/
 
 h1,h2,h3,h4,h5,h6,p,.text,ul,ol,dl,form,.mr-form,table,.mr-table,blockquote,pre,button,.mr-button,.card {margin-bottom: calc(var(--main-margin)/2);
 margin-top: calc(var(--main-margin)/2)}
 
-/*Ende Typographie*/
-
-/*Border*/
-
-.border {
- border: 2px solid var(--border-color)
+h1,h2,h3,h4,h5,h6 {
+ flex: 1 100%;
+ font-family: var(--main-headings-font);
+ color: var(--main-color)
 }
 
-.border-top {
- border-top: 2px solid
+h1 {
+ font-size: 2.25rem
 }
 
-.border-right {
- border-right: 2px solid
+h2 {
+ font-size: 2rem
 }
 
-.border-bottom {
- border-bottom: 2px solid
+h3 {
+ font-size: 1.75rem
 }
 
-.border-left {
- border-left: 2px solid
+h4 {
+ font-size: 1.5rem
 }
 
-.border-rounded {
- /* border: 2px solid;*/
- border-radius: 10px
+h5 {
+ font-size: 1.25rem
 }
 
-.border-main {
- border-color: var(--bg-main) !important
+h6 {
+ font-size: 1rem
 }
 
-.border-alert {
- border-color: var(--bg-alert) !important
+a {
+ color: var(--main-color);
+ text-decoration: underline
 }
 
-.border-success {
- border-color: var(--bg-success) !important
+a: hover {
+ opacity: .5
 }
-
-.border-warning {
- border-color: var(--bg-warning) !important
-}
-
-/*Border Ende*/
-
-/*Margin*/
-
-.ma {
- margin: .625rem
-}
-
-.ma-t {
- margin-top: .625rem !important
-}
-
-.ma-l {
- margin-left: .625rem !important
-}
-
-.ma-b {
- margin-bottom: .625rem !important
-}
-
-.ma-r {
- margin-right: .625rem !important
-}
-
-.ma-0 {
- margin: 0 !important
-}
-
-/*Margin end*/
-
-/*Padding*/
-
-.pa {
- padding: var(--main-padding) !important
-}
-
-.pa-t {
- padding-top: var(--main-padding) !important
-}
-
-.pa-l {
- padding-left: var(--main-padding) !important
-}
-
-.pa-b {
- padding-bottom: var(--main-padding) !important
-}
-
-.pa-r {
- padding-right: var(--main-padding) !important
-}
-
-.pa-0 {
- padding: 0 !important
-}
-
-.pa-t-0 {
- padding-top: 0 !important
-}
-
-.pa-r-0 {
- padding-right: 0 !important
-}
-
-.pa-b-0 {
- padding-bottom: 0 !important
-}
-
-.pa-l-0 {
- padding-left: 0 !important
-}
-
-/*Padding End*/
-
-/*Text*/
 
 .text {
 /* padding: var(--main-padding) 0 */
@@ -278,45 +192,122 @@ margin-top: calc(var(--main-margin)/2)}
  text-decoration: line-through
 }
 
-/*Text Ende*/
-
-h1,h2,h3,h4,h5,h6 {
- flex: 1 100%;
- font-family: var(--main-headings-font);
- color: var(--main-color)
+ul,ol {
+ list-style-position: inside
 }
 
-h1 {
- font-size: 2.25rem
+/*Border*/
+
+.border {
+ border: 2px solid var(--border-color)
 }
 
-h2 {
- font-size: 2rem
+.border-top {
+ border-top: 2px solid
 }
 
-h3 {
- font-size: 1.75rem
+.border-right {
+ border-right: 2px solid
 }
 
-h4 {
- font-size: 1.5rem
+.border-bottom {
+ border-bottom: 2px solid
 }
 
-h5 {
- font-size: 1.25rem
+.border-left {
+ border-left: 2px solid
 }
 
-h6 {
- font-size: 1rem
+.border-rounded {
+ border-radius: 10px
 }
 
-a {
- color: var(--main-color);
- text-decoration: underline
+.border-main {
+ border-color: var(--bg-main) !important
 }
 
-a: hover {
- opacity: .5
+.border-alert {
+ border-color: var(--bg-alert) !important
+}
+
+.border-success {
+ border-color: var(--bg-success) !important
+}
+
+.border-warning {
+ border-color: var(--bg-warning) !important
+}
+
+/*Margin*/
+
+.ma {
+ margin: .625rem
+}
+
+.ma-t {
+ margin-top: .625rem !important
+}
+
+.ma-l {
+ margin-left: .625rem !important
+}
+
+.ma-b {
+ margin-bottom: .625rem !important
+}
+
+.ma-r {
+ margin-right: .625rem !important
+}
+
+.ma-0 {
+ margin: 0 !important
+}
+
+/*Padding*/
+
+.pa {
+ padding: var(--main-padding) !important
+}
+
+.pa-t {
+ padding-top: var(--main-padding) !important
+}
+
+.pa-l {
+ padding-left: var(--main-padding) !important
+}
+
+.pa-b {
+ padding-bottom: var(--main-padding) !important
+}
+
+.pa-r {
+ padding-right: var(--main-padding) !important
+}
+
+.pa-0 {
+ padding: 0 !important
+}
+
+.pa-t-0 {
+ padding-top: 0 !important
+}
+
+.pa-r-0 {
+ padding-right: 0 !important
+}
+
+.pa-b-0 {
+ padding-bottom: 0 !important
+}
+
+.pa-l-0 {
+ padding-left: 0 !important
+}
+
+.no-padding {
+ padding: 0 !important
 }
 
 /* TABELLE*/
@@ -357,8 +348,6 @@ td {
  border: 1px solid #ddd
 }
 
-/*TABELLE ENDE*/
-
 /*Buttons*/
 
 .mr-button {
@@ -386,12 +375,6 @@ td {
 .mr-button: last-child {margin-right: 0}
 
 .mr-button a {color: #fff;text-decoration: none}
-
-/*Buttons Ende*/
-
-ul,ol {
- list-style-position: inside
-}
 
 /*Menu*/
 
@@ -505,8 +488,6 @@ nav .menu-btn: checked~.nav-wrapper .menu-icon: not(.steps) .navicon: after {
  color: #fff
 }
 
-/*Menu End*/
-
 .fixed-top {
  position: fixed;
  top: 0;
@@ -520,15 +501,6 @@ nav .menu-btn: checked~.nav-wrapper .menu-icon: not(.steps) .navicon: after {
  left: 0;
  width: 100%;
  padding: 0 1rem
-}
-
-img {
- max-width: 100%;
- height: auto
-}
-
-.no-padding {
- padding: 0 !important
 }
 
 /*Form*/
@@ -595,8 +567,6 @@ input[type=reset] {
  margin-right: .625rem
 }
 
-/*Form Ende*/
-
 /*Pagination*/
 
 .pagination {
@@ -655,11 +625,9 @@ input[type=reset] {
  border: 1px solid var(--bg-main)
 }
 
-/*Pagination Ende*/
-
 /*Media*/
 
-.media {
+.media, img {
  max-width: 100%;
  height: auto
 }
@@ -690,8 +658,6 @@ input[type=reset] {
  padding: var(--main-padding)
 }
 
-/*Card Ende*/
-
 /*Breadcrumb*/
 
 .mr-breadcrumb {
@@ -720,8 +686,6 @@ input[type=reset] {
 .mr-breadcrumb .active {
  background-color: initial
 }
-
-/*Breadcrumb Ende*/
 
 /*Accordion*/
 
@@ -787,8 +751,6 @@ input[type=reset] {
  content: "\2212"
 }
 
-/*Accordion Ende*/
-
 /*Tabs*/
 
 .mr-tabs {
@@ -823,7 +785,6 @@ input[type=reset] {
 
 .mr-tabs .tab {
  display: inline-block;
- /* line-height: 3em;*/
  padding: var(--main-padding);
  vertical-align: top;
  background-color: var(--main-color);
@@ -833,7 +794,6 @@ input[type=reset] {
 
 .mr-tabs .flex-tabs .panel {
  background-color: var(--main-bg-color);
- /* padding: var( --main-padding);*/
  max-height: 0;
  overflow-y: hidden;
  -webkit-transition: all 0.5s;
@@ -918,8 +878,6 @@ input[type=reset] {
  text-align: center
 }
 
-/*Tabs Ende*/
-
 /*Slider*/
 
 @keyframes fade {
@@ -970,8 +928,6 @@ input[type=reset] {
 .mr-slider img: nth-child(3) {
  animation-delay: 10s
 }
-
-/Slider Ende*/
 
 @media only screen and (min-width: 36em) {
 
@@ -1119,8 +1075,6 @@ input[type=reset] {
  max-width: 100%
  }
 
- /*Grid Ende*/
-
  /*MENÜ*/
 
  .nav {
@@ -1236,7 +1190,6 @@ padding-left: 0
  }
 
  .nav-vertical .menu li {
- /* float: none;*/
  border-right: none
  }
 
@@ -1257,14 +1210,11 @@ padding-left: 0
  top: inherit
  }
 
-
  .nav-vertical .menu .sub-menu li a, .nav-vertical .menu .sub-menu .multi {
  padding-left: 3rem
  }
 
  /*vertical ende*/
-
- /*MENÜ ENDE*/
 
  /*Form*/
 
@@ -1279,8 +1229,6 @@ padding-left: 0
  .mr-form-stacked select {
  display: block
  }
-
- /*Form Ende*/
 
  /*Tabs*/
 
@@ -1355,7 +1303,6 @@ padding-left: 0
  display: none
  }
 
- /*Tabs Ende*/
 }
 
 @media only screen and (min-width: 62rem) {
@@ -1476,7 +1423,7 @@ padding-left: 0
  flex-basis: 91.67%;
  max-width: 91.67%
  }
-
+ 
  .col-xl-12 {
  flex-basis: 100%;
  max-width: 100%
