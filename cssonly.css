@@ -1,4 +1,4 @@
-/*CSSonly UI beta2*/
+/*CSSonly UI beta3*/
 
 @import url('https: //fonts.googleapis.com/css?family=Lato&display=swap');
 
@@ -56,7 +56,7 @@ body {
  justify-content: flex-start
 }
 
-.row: last-child {
+.row:last-child {
  margin: 0
 }
 
@@ -106,7 +106,9 @@ body {
 
 /*Typographie*/
 
-h1,h2,h3,h4,h5,h6,p,.text,ul,ol,dl,form,.mr-form,table,.mr-table,blockquote,pre,button,.mr-button,.card {margin-bottom: calc(var(--main-margin)/2);
+h1,h2,h3,h4,h5,h6,p,.text,ul,ol,dl,form,.mr-form,table,.mr-table,blockquote,pre,button,.mr-button,.card {margin-
+
+bottom: calc(var(--main-margin)/2);
 margin-top: calc(var(--main-margin)/2)}
 
 h1,h2,h3,h4,h5,h6 {
@@ -144,7 +146,7 @@ a {
  text-decoration: underline
 }
 
-a: hover {
+a:hover {
  opacity: .5
 }
 
@@ -306,10 +308,6 @@ ul,ol {
  padding-left: 0 !important
 }
 
-.no-padding {
- padding: 0 !important
-}
-
 /* TABELLE*/
 
 .mr-table {
@@ -330,7 +328,7 @@ td {
  padding: var(--main-padding)
 }
 
-.mr-table.striped tr: nth-child(even) {
+.mr-table.striped tr:nth-child(even) {
  background: #ddd
 }
 
@@ -360,7 +358,7 @@ td {
  border-radius: 5px
 }
 
-.mr-button: hover {
+.mr-button:hover {
  opacity: .5
 }
 
@@ -406,7 +404,7 @@ td {
  text-decoration: none
 }
 
-.nav li a: hover,
+.nav li a:hover,
 .nav .menu-btn: hover {
  background-color: var(--main-color);
  color: #fff;
@@ -449,11 +447,11 @@ td {
  width: 100%
 }
 
-.nav .menu-icon .navicon: before {
+.nav .menu-icon .navicon:before {
  top: 6px
 }
 
-.nav .menu-icon .navicon: after {
+.nav .menu-icon .navicon:after {
  top: -6px
 }
 
@@ -461,25 +459,24 @@ td {
  display: none
 }
 
-.nav .menu-btn: checked~.menu {
+.nav .menu-btn:checked~.menu {
  max-height: 500px;
  overflow-y: auto
 }
 
-nav .menu-btn: checked~.nav-wrapper .menu-icon .navicon {
+nav .menu-btn:checked~.nav-wrapper .menu-icon .navicon {
  background: transparent
 }
 
-nav .menu-btn: checked~.nav-wrapper .menu-icon .navicon: before {
+nav .menu-btn:checked~.nav-wrapper .menu-icon .navicon:before {
  transform: rotate(-45deg)
 }
 
-nav .menu-btn: checked~.nav-wrapper .menu-icon .navicon: after {
+nav .menu-btn:checked~.nav-wrapper .menu-icon .navicon:after {
  transform: rotate(45deg)
 }
-
-nav .menu-btn: checked~.nav-wrapper .menu-icon: not(.steps) .navicon: before,
-nav .menu-btn: checked~.nav-wrapper .menu-icon: not(.steps) .navicon: after {
+nav .menu-btn:checked~.nav-wrapper .menu-icon:not(.steps) .navicon:before,
+nav .menu-btn:checked~.nav-wrapper .menu-icon:not(.steps) .navicon:after {
  top: 0
 }
 
@@ -545,7 +542,7 @@ select {
  border-radius: 5px
 }
 
-input: focus,
+input:focus,
 textarea: focus {
  outline: none !important;
  border: 1px solid var(--main-color)
@@ -603,16 +600,16 @@ input[type=reset] {
  color: var(--main-bg-color)
 }
 
-.pagination a: hover: not(.active) {
+.pagination a:hover:not(.active) {
  background-color: #eee
 }
 
-.pagination-border a: first-child {
+.pagination-border a:first-child {
  border-top-left-radius: 5px;
  border-bottom-left-radius: 5px
 }
 
-.pagination-border a: last-child {
+.pagination-border a:last-child {
  border-top-right-radius: 5px;
  border-bottom-right-radius: 5px
 }
@@ -670,12 +667,12 @@ input[type=reset] {
  padding-right: .5rem
 }
 
-.mr-breadcrumb li: after {
+.mr-breadcrumb li:after {
  padding-left: .5rem;
  content: ' \003E'
 }
 
-.mr-breadcrumb li: last-child: : after {
+.mr-breadcrumb li:last-child::after {
  content: ''
 }
 
@@ -701,7 +698,7 @@ input[type=reset] {
  overflow: hidden
 }
 
-.accordion-tab: last-child {
+.accordion-tab:last-child {
  margin-bottom: 0
 }
 
@@ -732,22 +729,22 @@ input[type=reset] {
  padding: var(--main-padding)
 }
 
-.mr-accordion input: checked~.accordion-content {
+.mr-accordion input:checked~.accordion-content {
  max-height: 10em
 }
 
-.mr-accordion label: : after {
+.mr-accordion label::after {
  margin: 0 0 0 auto;
  -webkit-transition: all .35s;
  -o-transition: all .35s;
  transition: all .35s
 }
 
-.mr-accordion input[type=radio]+label: : after {
+.mr-accordion input[type=radio]+label::after {
  content: "\002B"
 }
 
-.mr-accordion input[type=radio]: checked+label: : after {
+.mr-accordion input[type=radio]:checked+label::after {
  content: "\2212"
 }
 
@@ -821,7 +818,7 @@ input[type=reset] {
  border-bottom: 1px solid #fff
 }
 
-.flex-tabs .tab: last-of-type {
+.flex-tabs .tab:last-of-type {
  border-bottom: none
 }
 
@@ -856,21 +853,21 @@ input[type=reset] {
  order: 6
 }
 
-#tab-one: checked~.tabs #tab-one-label,
-#tab-two: checked~.tabs #tab-two-label,
-#tab-three: checked~.tabs #tab-three-label {
+#tab-one:checked~.tabs #tab-one-label,
+#tab-two:checked~.tabs #tab-two-label,
+#tab-three:checked~.tabs #tab-three-label {
  border-bottom: none
 }
 
-#tab-one: checked~.tabs #tab-one-panel,
-#tab-two: checked~.tabs #tab-two-panel,
-#tab-three: checked~.tabs #tab-three-panel {
+#tab-one:checked~.tabs #tab-one-panel,
+#tab-two:checked~.tabs #tab-two-panel,
+#tab-three:checked~.tabs #tab-three-panel {
  border-bottom: 1px solid #fff;
  max-height: 150px;
  opacity: 1
 }
 
-.mr-tabs label: : after {
+.mr-tabs label::after {
  content: "\002B";
  position: absolute;
  right: 0;
@@ -917,15 +914,15 @@ input[type=reset] {
  animation-iteration-count: infinite
 }
 
-.mr-slider img: nth-child(1) {
+.mr-slider img:nth-child(1) {
  animation-delay: 0s
 }
 
-.mr-slider img: nth-child(2) {
+.mr-slider img:nth-child(2) {
  animation-delay: 5s
 }
 
-.mr-slider img: nth-child(3) {
+.mr-slider img:nth-child(3) {
  animation-delay: 10s
 }
 
@@ -939,11 +936,11 @@ input[type=reset] {
 
  [class*='col-'] {}
 
- [class*='col-']: first-child {
+ [class*='col-']:first-child {
  margin-left: 0
  }
 
- [class*='col-']: last-child {
+ [class*='col-']:last-child {
  margin-right: 0
  }
 
@@ -1097,22 +1094,22 @@ input[type=reset] {
  white-space: nowrap
  }
 
- .menu li>a: after {
+ .menu li>a:after {
  margin-left: 5px;
  content: '\25B8'
  }
 
- .menu>li>a: after {
+ .menu>li>a:after {
  margin-left: 5px;
  content: '\25BE'
  }
 
- .menu li>a: only-child: after {
+ .menu li>a:only-child:after {
  margin-left: 0;
  content: ''
  }
 
- .nav li: last-of-type {
+ .nav li:last-of-type {
  border-right: none
  }
 
@@ -1143,11 +1140,11 @@ input[type=reset] {
  color: var(--main-color)
  }
 
- .sub-menu a: hover {
+ .sub-menu a:hover {
  color: var(--main-bg-color)
  }
 
- .nav .menu li: hover>ul {
+ .nav .menu li:hover>ul {
  max-height: 500px;
  overflow: visible
  }
@@ -1278,15 +1275,15 @@ padding-left: 0
  }
 
  .flex-tabs .tab,
- .flex-tabs .tab: last-of-type {
+ .flex-tabs .tab:last-of-type {
  background-color: #eee;
  border: 1px solid #ccc;
  border-left: 10px solid #ccc
  }
 
- #tab-one: checked~.tabs #tab-one-label,
- #tab-two: checked~.tabs #tab-two-label,
- #tab-three: checked~.tabs #tab-three-label {
+ #tab-one:checked~.tabs #tab-one-label,
+ #tab-two:checked~.tabs #tab-two-label,
+ #tab-three:checked~.tabs #tab-three-label {
  background-color: #fff;
  border-left: 10px solid var(--main-color)
  }
@@ -1295,11 +1292,11 @@ padding-left: 0
  color: var(--main-font-color)
  }
 
- .mr-tabs .tab: hover {
+ .mr-tabs .tab:hover {
  background-color: var(--main-bg-color)
  }
 
- .mr-tabs label: : after {
+ .mr-tabs label:after {
  display: none
  }
 
@@ -1423,7 +1420,7 @@ padding-left: 0
  flex-basis: 91.67%;
  max-width: 91.67%
  }
- 
+
  .col-xl-12 {
  flex-basis: 100%;
  max-width: 100%
