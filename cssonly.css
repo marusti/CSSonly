@@ -106,10 +106,10 @@ body {
 
 /*Typographie*/
 
-h1,h2,h3,h4,h5,h6,p,.text,ul,ol,dl,form,.mr-form,table,.mr-table,blockquote,pre,button,.mr-button,.card {margin-
-
-bottom: calc(var(--main-margin)/2);
-margin-top: calc(var(--main-margin)/2)}
+h1,h2,h3,h4,h5,h6,p,.text,ul,ol,dl,form,.mr-form,table,.mr-table,blockquote,pre,button,.mr-button,.card {
+ margin-bottom: calc(var(--main-margin)/2);
+margin-top: calc(var(--main-margin)/2)
+}
 
 h1,h2,h3,h4,h5,h6 {
  flex: 1 100%;
