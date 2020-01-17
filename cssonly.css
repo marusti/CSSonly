@@ -436,8 +436,8 @@ td {
  width: 18px
 }
 
-.nav .menu-icon .navicon: before,
-.nav .menu-icon .navicon: after {
+.nav .menu-icon .navicon:before,
+.nav .menu-icon .navicon:after {
  background: #333;
  content: '';
  display: block;
