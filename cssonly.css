@@ -405,7 +405,7 @@ td {
 }
 
 .nav li a:hover,
-.nav .menu-btn: hover {
+.nav .menu-btn:hover {
  background-color: var(--main-color);
  color: #fff;
  opacity: 1
