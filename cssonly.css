@@ -355,7 +355,8 @@ td {
  padding: var(--main-padding);
  margin-right: 10px;
  border: 2px solid #eee;
- border-radius: 5px
+ border-radius: 5px;
+ cursor:pointer
 }
 
 .mr-button:hover {
