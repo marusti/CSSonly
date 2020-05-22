@@ -1,4 +1,4 @@
-/*CSSonly UI beta3*/
+/*CSSonly UI beta5*/
 
 @import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
 
@@ -29,14 +29,15 @@
 body {
  font-family: var(--main-font);
  color: var(--main-font-color);
- font-size: 1.1rem;
- line-height: 1.5;
+ font-size: 16px;
+ line-height: 1.4;
  background-color: var(--main-bg-color)
 }
 
 /*Grid*/
 
 .mr-grid {
+ max-width:1200px;
  margin-right: auto;
  margin-left: auto
 }
@@ -106,7 +107,7 @@ body {
 
 /*Typographie*/
 
-h1,h2,h3,h4,h5,h6,p,.text,ul,ol,dl,form,.mr-form,table,.mr-table,blockquote,pre,button,.mr-button,.card {
+h1,h2,h3,h4,h5,h6,p,.text,ul,ol,dl,form,.mr-form,table,.mr-table,blockquote,pre,button,.mr-button,.card, img {
  margin-bottom: calc(var(--main-margin)/2);
 margin-top: calc(var(--main-margin)/2)
 }
@@ -186,6 +187,10 @@ a:hover {
  font-style: italic
 }
 
+.bold {
+font-weight: 700
+}
+
 .underline {
  text-decoration: underline
 }
@@ -194,8 +199,59 @@ a:hover {
  text-decoration: line-through
 }
 
-ul,ol {
+.justify-center {
+justify-content:center
+}
+
+.justify-start {
+justify-content:flex-start
+}
+
+.justify-end {
+justify-content:flex-end
+}
+
+.small {
+font-size: .8rem
+}
+
+/*ul,ol {
  list-style-position: inside
+}*/
+
+blockquote{
+background: #fff;
+margin-left: 3.125rem;
+margin-right: 3.125rem;
+padding: 2rem 2rem 2rem 3rem;
+position: relative;
+line-height: 1.2;
+color: #666;
+text-align: justify;
+border-left: 15px solid var(--main-color);
+border-right: 5px solid var(--main-color);
+box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+font-style: italic
+}
+
+blockquote::before{
+content: "\201C";
+font-family: Georgia, serif;
+font-size: 4rem;
+font-weight: bold;
+color: #999;
+position: absolute;
+left: 10px;
+top:5px;
+}
+
+blockquote::after{
+content: "";
+}
+
+code {
+background: var(--border-color);
+color: var(--alert-color)
 }
 
 /*Border*/
@@ -243,23 +299,23 @@ ul,ol {
 /*Margin*/
 
 .ma {
- margin: .625rem
+ margin: var(--main-margin)
 }
 
 .ma-t {
- margin-top: .625rem !important
+ margin-top: var(--main-margin) !important
 }
 
 .ma-l {
- margin-left: .625rem !important
+ margin-left: var(--main-margin) !important
 }
 
 .ma-b {
- margin-bottom: .625rem !important
+ margin-bottom: var(--main-margin) !important
 }
 
 .ma-r {
- margin-right: .625rem !important
+ margin-right: var(--main-margin) !important
 }
 
 .ma-0 {
@@ -329,7 +385,7 @@ td {
 }
 
 .mr-table.striped tr:nth-child(even) {
- background: #ddd
+ background: var(--border-color);
 }
 
 .striped th {
@@ -343,7 +399,7 @@ td {
 
 .mr-table-border td,
 .mr-table-border th {
- border: 1px solid #ddd
+ border: 1px solid var(--border-color)
 }
 
 /*Buttons*/
@@ -354,9 +410,9 @@ td {
  background-color: var(--main-bg-color);
  padding: var(--main-padding);
  margin-right: 10px;
- border: 2px solid #eee;
+ border: 2px solid var(--border-color);
  border-radius: 5px;
- cursor:pointer
+ cursor: pointer
 }
 
 .mr-button:hover {
@@ -401,8 +457,12 @@ td {
  display: -webkit-flex;
  display: flex;
  padding: 20px 20px;
- border-right: 1px solid #f4f4f4;
+ border-right: 1px solid var(--border-color);
  text-decoration: none
+}
+
+.nav li a:last-child {
+border-right: none
 }
 
 .nav li a:hover,
@@ -412,14 +472,15 @@ td {
  opacity: 1
 }
 
-.nav .logo {
+.logo {
  font-size: 2rem;
  text-decoration: none
 }
 
 .nav .menu {
  max-height: 0;
- transition: max-height .2s ease-out
+ transition: max-height .2s ease-out;
+ margin: 0
 }
 
 .nav .menu-icon {
@@ -429,7 +490,7 @@ td {
 }
 
 .nav .menu-icon .navicon {
- background: #333;
+ background: var(--main-color);
  display: block;
  height: 2px;
  position: relative;
@@ -439,7 +500,7 @@ td {
 
 .nav .menu-icon .navicon:before,
 .nav .menu-icon .navicon:after {
- background: #333;
+ background: var(--main-color);
  content: '';
  display: block;
  height: 100%;
@@ -483,7 +544,8 @@ nav .menu-btn:checked~.nav-wrapper .menu-icon:not(.steps) .navicon:after {
 
 .active {
  background-color: var(--main-color);
- color: #fff
+ color: #fff;
+ border-right:none!important
 }
 
 .fixed-top {
@@ -504,43 +566,58 @@ nav .menu-btn:checked~.nav-wrapper .menu-icon:not(.steps) .navicon:after {
 /*Form*/
 
 .mr-form {
- display: block;
+ display: flex;
+ flex-direction:column;
  padding: var(--main-padding) 0
 }
 
-.mr-form-stacked {
- display: block
+.mr-form-group {
+ display: flex;
+ align-items: center
+}
+
+.mr-form-group input[type=text],
+.mr-form-group textarea,
+.mr-form-group select {
+flex:1;
+font-family: var(---main-font)
 }
 
 label {
- padding: .625rem .625rem .625rem 0
+/* padding: .625rem .625rem .625rem 0*/
 }
 
 input {
+ background: #fff;	
  padding: var(--main-padding);
  margin: .625rem 0;
  display: block;
  vertical-align: middle;
- border: 2px solid #ddd;
- border-radius: 5px
+ border: 2px solid var(--border-color);
+ border-radius: 5px;
+ font-family: var(---main-font)
 }
 
 textarea {
+ background: #fff;	
  padding: var(--main-padding);
  margin: .625rem 0;
  display: block;
  vertical-align: middle;
- border: 2px solid #ddd;
- border-radius: 5px
+ border: 2px solid var(--border-color);
+ border-radius: 5px;
+ font-family: var(---main-font)
 }
 
 select {
+ background: #fff;	
  padding: var(--main-padding);
  margin: .625rem 0;
  display: block;
  vertical-align: middle;
- border: 2px solid #ddd;
- border-radius: 5px
+ border: 2px solid var(--border-color);
+ border-radius: 5px;
+ font-family: var(---main-font)
 }
 
 input:focus,
@@ -616,7 +693,7 @@ input[type=reset] {
 }
 
 .pagination-border a {
- border: 1px solid #eee
+ border: 1px solid var(--border-color);
 }
 
 .pagination-border a.active {
@@ -877,7 +954,7 @@ input[type=reset] {
 }
 
 /*Slider*/
-
+/*
 @keyframes fade {
  0% {
  opacity: 0
@@ -926,6 +1003,117 @@ input[type=reset] {
 .mr-slider img:nth-child(3) {
  animation-delay: 10s
 }
+*/
+
+/*Well*/
+
+.mr-well {
+background: var(--border-color);
+padding: var(--main-padding)
+}
+
+/*Lists*/
+
+.mr-list, .mr-sublist {
+list-style-position: outside;
+padding-left: calc(var(--main-padding)*2)
+}
+
+/*Animation*/
+
+.fadeIn {
+  -webkit-animation-name: fadeIn;
+  animation-name: fadeIn;
+  -webkit-animation-duration: 2s;
+  animation-duration: 2s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.slideInLeft {
+  -webkit-animation-name: slideInLeft;
+  animation-name: slideInLeft;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  }
+  @-webkit-keyframes slideInLeft {
+  0% {
+  -webkit-transform: translateX(-100%);
+  transform: translateX(-100%);
+  visibility: visible;
+  }
+  100% {
+  -webkit-transform: translateX(0);
+  transform: translateX(0);
+  }
+  }
+  @keyframes slideInLeft {
+  0% {
+  -webkit-transform: translateX(-100%);
+  transform: translateX(-100%);
+  visibility: visible;
+  }
+  100% {
+  -webkit-transform: translateX(0);
+  transform: translateX(0);
+  }
+  } 
+  
+  .slideInRight {
+  -webkit-animation-name: slideInRight;
+  animation-name: slideInRight;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  }
+  @-webkit-keyframes slideInRight {
+  0% {
+  -webkit-transform: translateX(100%);
+  transform: translateX(100%);
+  visibility: visible;
+  }
+  100% {
+  -webkit-transform: translateX(0);
+  transform: translateX(0);
+  }
+  }
+  @keyframes slideInRight {
+  0% {
+  -webkit-transform: translateX(100%);
+  transform: translateX(100%);
+  visibility: visible;
+  }
+  100% {
+  -webkit-transform: translateX(0);
+  transform: translateX(0);
+  }
+  } 
+  
+  
+
 
 @media only screen and (min-width: 36em) {
 
@@ -1086,13 +1274,14 @@ input[type=reset] {
 
  .nav li {
  position: relative;
- border-right: 1px solid #f4f4f4
+ border-right: 1px solid var(--border-color)
  }
 
  .nav li a {
  padding: 16px 30px;
  font-size: 1.2rem;
- white-space: nowrap
+ white-space: nowrap;
+ border-right: none
  }
 
  .menu li>a:after {
@@ -1124,7 +1313,8 @@ input[type=reset] {
  max-height: none;
  overflow: inherit;
  max-height: none;
- overflow: inherit
+ overflow: inherit;
+ z-index: 999
  }
 
  .sub-menu {
@@ -1219,7 +1409,7 @@ padding-left: 0
  .mr-form input,
  .mr-form textarea,
  .mr-form select {
- display: inline-block
+/* display: inline-block */
  }
 
  .mr-form-stacked input,
