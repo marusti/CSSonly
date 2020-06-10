@@ -14,10 +14,11 @@ CSSonly is a pure CSS UI kit that lets you create responsive websites quickly an
 - Multi-Level Navbar
 - Pagination
 - Table
+- Tabs
 - Typography
 - Well
 
 ## Getting started
-Include 'cssonly.css' or 'cssonly.min.css' file into the head section of your HTML file.
+Include 'cssonly.css' or 'cssonly.min.css' into the head section of your HTML file.
 
 Done!
