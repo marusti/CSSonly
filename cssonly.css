@@ -1,4 +1,4 @@
-/*CSSonly UI RC1*/
+/*CSSonly UI RC2*/
 
 :root {
   --main-color: #06c;
@@ -293,6 +293,10 @@ code {
   border-color: var(--bg-warning) !important
 }
 
+.border-0 {
+	border: none
+}
+
 /*Margin*/
 
 .ma {
@@ -461,7 +465,7 @@ td {
   overflow: hidden
 }
 
-.nav ul ul li a,
+.sub-menu li a,
 .multi {
   padding-left: calc(var(--main-padding)*2)
 }
@@ -499,7 +503,7 @@ td {
 .nav .menu-icon {
   cursor: pointer;
   margin-left: auto;
-  padding: 32px 20px
+  padding: 2rem 1.25rem
 }
 
 .nav .menu-icon .navicon {
@@ -508,7 +512,7 @@ td {
   height: 2px;
   position: relative;
   transition: background .2s ease-out;
-  width: 18px
+  width: 1.125rem
 }
 
 .nav .menu-icon .navicon:before,
@@ -535,7 +539,7 @@ td {
 }
 
 .nav .menu-btn:checked~.menu {
-  max-height: 500px;
+  max-height: 31.25rem;
   overflow-y: auto
 }
 
@@ -573,8 +577,7 @@ nav .menu-btn:checked~.nav-wrapper .menu-icon:not(.steps) .navicon:after {
   position: fixed;
   bottom: 0;
   left: 0;
-  width: 100%;
-  padding: 0 1rem
+  width: 100%
 }
 
 /*Form*/
@@ -1177,7 +1180,7 @@ img {
     max-width: 100%
   }
 
-  /*MENÜ*/
+  /*MENU*/
 
   .nav {
     display: -webkit-flex;
@@ -1194,7 +1197,7 @@ img {
   }
 
   .nav li a {
-    padding: 16px 30px;
+    padding: 1rem 1.875rem;
     font-size: 1.2rem;
     white-space: nowrap;
     border-right: none
@@ -1252,7 +1255,7 @@ img {
   }
 
   .nav .menu li:hover>ul {
-    max-height: 500px;
+    max-height: 31.25rem;
     overflow: visible
   }
 
@@ -1262,14 +1265,12 @@ img {
     padding-left: 0
   }
 
-  .nav .menu ul li {}
-
-  .nav ul ul li {
+  .sub-menu li {
     border-right: none
   }
 
-  .nav ul ul li a {
-    padding: 16px 30px;
+  .sub-menu li a {
+    padding: 1rem 1.875rem;
     border-right: none
   }
 
@@ -1283,8 +1284,6 @@ img {
     -webkit-flex-direction: column;
     flex-direction: column
   }
-
-  .nav-vertical .logo {}
 
   .nav-vertical .menu {
     -webkit-flex-direction: column;
