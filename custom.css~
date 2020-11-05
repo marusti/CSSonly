@@ -1,8 +1,8 @@
-@media only screen and (min-width: 36rem) {
+@media only screen and (min-width: 36em) {
 
 }
 
-@media only screen and (min-width: 48rem) {
+@media only screen and (min-width: 48em) {
 
 }
 
