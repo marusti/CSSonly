@@ -1197,7 +1197,7 @@ img {
   }
 
   .nav li a {
-    padding: var(--main-padding calc(var(--main-padding)*2);
+    padding: var(--main-padding) calc(var(--main-padding)*2);
     font-size: 1.2rem;
     white-space: nowrap;
     border-right: none
@@ -1270,7 +1270,7 @@ img {
   }
 
   .sub-menu li a {
-    padding: var(--main-padding calc(var(--main-padding)*2);
+    padding: var(--main-padding) calc(var(--main-padding)*2);
     border-right: none
   }
 
