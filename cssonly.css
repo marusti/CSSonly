@@ -1,4 +1,4 @@
-/*CSSonly UI 1.0.1*/
+/*CSSonly UI 1.0.2*/
 
 :root {
   --main-color: #06c;
@@ -113,7 +113,7 @@ body {
 
 /*Typographie*/
 
-h1,h2,h3,h4,h5,h6,p,.text,ul,ol,dl,.mr-accordion,.mr-form,.mr-form-group,.mr-form-box,.mr-table,blockquote,pre,button,.mr-button,.card,img,.mr-progress,input,textarea,select,.pagination {
+p,.text,ul,ol,dl,.mr-accordion,.mr-form,.mr-form-group,.mr-form-box,.mr-table,blockquote,pre,button,.mr-button,.card,img,.mr-progress,input,textarea,select,.pagination {
   margin-bottom: calc(var(--main-margin)/2);
   margin-top: calc(var(--main-margin)/2)
 }
@@ -121,7 +121,9 @@ h1,h2,h3,h4,h5,h6,p,.text,ul,ol,dl,.mr-accordion,.mr-form,.mr-form-group,.mr-for
 h1,h2,h3,h4,h5,h6 {
   flex: 1 100%;
   font-family: var(--main-headings-font);
-  color: var(--main-color)
+  color: var(--main-color);
+  margin-top: calc(var(--main-margin)*2);
+  margin-bottom: calc(var(--main-margin)*2)
 }
 
 h1 {
@@ -215,6 +217,27 @@ a:hover {
 
 .small {
   font-size: .8rem
+}
+
+
+.text-1x {
+  font-size: 1rem
+}
+
+.text-2x {
+  font-size: 2rem
+}
+
+.text-3x {
+  font-size: 3rem
+}
+
+.text-4x {
+  font-size: 4rem
+}
+
+.text-5x {
+  font-size: 5rem
 }
 
 blockquote {
@@ -419,6 +442,7 @@ td {
 /*Buttons*/
 
 .mr-button {
+	display: inline-flex;
   font-size: 1rem;
   font-family: var(--main-font);
   background-color: var(--main-bg-color);
@@ -672,12 +696,13 @@ input[type=reset] {
 }
 
 .pagination ul {
-  list-style-type: none
+  list-style-type: none;
+  text-align: center
 }
 
 .pagination ul li {
-  display: inline-block;
-  margin-bottom: 1rem
+  display: inline-flex;
+  padding: 8px 0
 }
 
 .pagination a {
@@ -1193,11 +1218,11 @@ img {
 
   .nav li {
     position: relative;
-    border-right: 1px solid var(--border-color)
+    border-right: 1px solid var(--main-color)
   }
 
   .nav li a {
-    padding: var(--main-padding calc(var(--main-padding)*2);
+    padding: var(--main-padding) calc(var(--main-padding)*2);
     font-size: 1.2rem;
     white-space: nowrap;
     border-right: none
@@ -1229,6 +1254,7 @@ img {
     flex: 1 0 0;
     -webkit-justify-content: flex-end;
     justify-content: flex-end;
+    align-self: center;
     max-height: none;
     overflow: inherit;
     max-height: none;
@@ -1270,7 +1296,7 @@ img {
   }
 
   .sub-menu li a {
-    padding: var(--main-padding calc(var(--main-padding)*2);
+    padding: var(--main-padding) calc(var(--main-padding)*2);
     border-right: none
   }
 
