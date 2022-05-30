@@ -1,4 +1,4 @@
-/*CSSonly UI 1.0.2*/
+/*CSSonly UI 1.0.3*/
 
 :root {
   --main-color: #06c;
@@ -446,6 +446,7 @@ td {
   font-size: 1rem;
   font-family: var(--main-font);
   background-color: var(--main-bg-color);
+  text-decoration: none;
   padding: var(--main-padding);
   margin-left: calc(var(--main-margin)/2);
   margin-right: calc(var(--main-margin)/2);
