@@ -444,6 +444,7 @@ td {
 .mr-button {
 	display: inline-flex;
   font-size: 1rem;
+  align-items: center;
   font-family: var(--main-font);
   background-color: var(--main-bg-color);
   text-decoration: none;
@@ -629,6 +630,7 @@ select {
 }
 
 input[type=text],
+input[type=password],
 textarea,
 select {
   width: 100%
@@ -1264,7 +1266,7 @@ img {
   }
 
   .sub-menu {
-    background-color: var(--main-bg-color);
+  /*  background-color: var(--main-bg-color); */
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     margin: 0;
     max-height: 0;
@@ -1316,12 +1318,17 @@ img {
     -webkit-flex-direction: column;
     flex-direction: column;
     -webkit-justify-content: flex-start;
-    justify-content: flex-start
+    justify-content: flex-start;
+    align-self: initial
   }
 
   .nav-vertical .menu li {
     border-right: none
   }
+  
+  .nav-vertical li a {
+	font-size: 1rem
+	}
 
   .nav-vertical .menu .sub-menu {
     position: inherit;
