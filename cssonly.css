@@ -1,4 +1,4 @@
-/*CSSonly UI 1.0.3*/
+/*CSSonly UI 1.0.4*/
 
 :root {
   --main-color: #06c;
@@ -241,7 +241,7 @@ a:hover {
 }
 
 blockquote {
-  background: #fff;
+  background: var(--main-bg-color);
   margin-left: var(--main-margin);
   margin-right: var(--main-margin);
   padding: var(--main-padding) var(--main-padding) var(--main-padding) calc(var(--main-padding)*5);
@@ -257,7 +257,7 @@ blockquote {
 blockquote::before {
   content: "\201C";
   font-family: var(--second-font);
-  font-size: 4rem;
+  font-size: 2rem;
   font-weight: bold;
   color: #999;
   position: absolute;
@@ -491,8 +491,7 @@ td {
   overflow: hidden
 }
 
-.sub-menu li a,
-.multi {
+.nav .sub-menu li a,.multi {
   padding-left: calc(var(--main-padding)*2)
 }
 
@@ -500,16 +499,10 @@ td {
   display: -webkit-flex;
   display: flex;
   padding: var(--main-padding);
-  border-right: 1px solid var(--border-color);
   text-decoration: none
 }
 
-.nav li a:last-child {
-  border-right: none
-}
-
-.nav li a:hover,
-.nav .menu-btn:hover {
+.nav li a:hover,.nav .menu-btn:hover {
   background-color: var(--main-color);
   color: #fff;
   opacity: 1
@@ -588,8 +581,7 @@ nav .menu-btn:checked~.nav-wrapper .menu-icon:not(.steps) .navicon:after {
 
 .active {
   background-color: var(--main-color);
-  color: #fff;
-  border-right: none !important
+  color: var(--main-bg-color)
 }
 
 .fixed-top {
@@ -714,6 +706,10 @@ input[type=reset] {
   text-decoration: none
 }
 
+.pagination a.active::after {
+	display: none
+}
+
 .pagination a.active {
   background-color: var(--bg-main);
   color: var(--main-bg-color)
@@ -780,21 +776,25 @@ img {
 /*Breadcrumb*/
 
 .mr-breadcrumb {
-  display: inline-flex;
+  display: flex;
   font-size: 1rem;
-  list-style: none
+  padding: var(--main-padding)
 }
 
-.mr-breadcrumb li {
-  padding-right: .5rem
+.mr-breadcrumb- ol {
+list-style: none
 }
 
-.mr-breadcrumb li:after {
-  padding-left: .5rem;
+.mr-breadcrumb ol li {
+  display: inline
+}
+
+.mr-breadcrumb ol li:after {
+  padding-left: var(--main-padding);
   content: ' \003E'
 }
 
-.mr-breadcrumb li:last-child::after {
+.mr-breadcrumb ol li:last-child::after {
   content: ''
 }
 
@@ -908,10 +908,12 @@ img {
   border-bottom: 1px solid var(--border-color);
 }
 
-/*Well*/
+/*Highlight*/
 
-.mr-well {
-  background: var(--border-color);
+.mr-highlight {
+	background: #f9f9f9;
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius);
   padding: var(--main-padding)
 }
 
@@ -1220,30 +1222,34 @@ img {
   }
 
   .nav li {
-    position: relative;
-    border-right: 1px solid var(--main-color)
+    position: relative
+  }
+  
+  .nav li:not(:first-child)::before {
+  	content: '';
+  	position: absolute;
+  	background-color: var(--main-color);
+  	width: 1px;
+  	height: 50%;
+  	bottom: .7rem
+  }
+  
+  .nav .sub-menu li::before {
+  display: none;
   }
 
   .nav li a {
     padding: var(--main-padding) calc(var(--main-padding)*2);
-    font-size: 1.2rem;
-    white-space: nowrap;
-    border-right: none
+    white-space: nowrap
   }
-
-  .menu li>a:after {
-    margin-left: 5px;
-    content: '\25B8'
-  }
-
-  .menu>li>a:after {
-    margin-left: 5px;
-    content: '\25BE'
+  
+  .nav li a:hover {
+  background: initial;
+  color: var(--main-color)
   }
 
   .menu li>a:only-child:after {
     margin-left: 0;
-    content: ''
   }
 
   .nav li:last-of-type {
@@ -1266,7 +1272,7 @@ img {
   }
 
   .sub-menu {
-  /*  background-color: var(--main-bg-color); */
+    background-color: var(--main-bg-color);
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     margin: 0;
     max-height: 0;
@@ -1277,10 +1283,14 @@ img {
 
   .sub-menu a {
     color: var(--main-color)
-  }
+  }  
 
   .sub-menu a:hover {
     color: var(--main-bg-color)
+  }
+  
+  .sub-menu a:hover::after {
+  /*	display: none */
   }
 
   .nav .menu li:hover>ul {
@@ -1295,16 +1305,33 @@ img {
   }
 
   .sub-menu li {
-    border-right: none
+  /*  border-right: none */
   }
 
   .sub-menu li a {
     padding: var(--main-padding) calc(var(--main-padding)*2);
-    border-right: none
+ /*   border-right: none */
   }
 
   .nav .menu-icon {
     display: none
+  }
+  
+  .active {
+  	background:initial; 
+  	color:var(--main-color) 
+  }
+  
+  .active::after, .nav li a:hover::after {
+    content: '';
+  position: absolute;
+  bottom: 5px;
+  height: 2px;
+  width: 50%;
+  left: 0;
+  right: 0;
+  margin: auto!important;
+  background-color: var(--main-color)
   }
 
   /*vertical*/
@@ -1322,12 +1349,17 @@ img {
     align-self: initial
   }
 
-  .nav-vertical .menu li {
-    border-right: none
+  .nav-vertical .menu li a:hover, .nav-vertical .menu .active {
+    background: var(--main-color);
+    color: var(--main-bg-color)
   }
   
-  .nav-vertical li a {
-	font-size: 1rem
+  .nav-vertical .menu li a::after {
+  display: none;
+  }
+  
+  .nav-vertical li::before {
+	display: none
 	}
 
   .nav-vertical .menu .sub-menu {
@@ -1342,8 +1374,7 @@ img {
     top: inherit
   }
 
-  .nav-vertical .menu .sub-menu li a,
-  .nav-vertical .menu .sub-menu .multi {
+  .nav-vertical .menu .sub-menu li a, .nav-vertical .menu .sub-menu .multi {
     padding-left: 3rem
   }
 
@@ -1379,6 +1410,10 @@ img {
     padding: 2rem 2rem 2rem 3rem;
     text-align: justify
   }
+  
+  blockquote::before {
+  font-size: 4rem
+}
 
 }
 
