@@ -1,4 +1,4 @@
-/*CSSonly UI 1.0.4*/
+/*CSSonly UI 1.0.5*/
 
 :root {
   --main-color: #06c;
@@ -502,7 +502,7 @@ td {
   text-decoration: none
 }
 
-.nav li a:hover,.nav .menu-btn:hover {
+.nav li a:hover,.nav .sub-menu li a:hover,.nav .menu-btn:hover {
   background-color: var(--main-color);
   color: #fff;
   opacity: 1
@@ -1290,7 +1290,7 @@ list-style: none
   }
   
   .sub-menu a:hover::after {
-  /*	display: none */
+
   }
 
   .nav .menu li:hover>ul {
@@ -1305,12 +1305,11 @@ list-style: none
   }
 
   .sub-menu li {
-  /*  border-right: none */
+  
   }
 
   .sub-menu li a {
-    padding: var(--main-padding) calc(var(--main-padding)*2);
- /*   border-right: none */
+    padding: var(--main-padding) calc(var(--main-padding)*2)
   }
 
   .nav .menu-icon {
@@ -1332,6 +1331,10 @@ list-style: none
   right: 0;
   margin: auto!important;
   background-color: var(--main-color)
+  }
+  
+  .nav .sub-menu li a:hover::after {
+  content: unset
   }
 
   /*vertical*/
