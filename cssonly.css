@@ -1,4 +1,4 @@
-/*CSSonly UI 1.1*/
+/*CSSonly UI 1.1.1*/
 
 :root {
   --main-color: #003f6b;
@@ -20,11 +20,7 @@
   --border-radius: 8px;
   --content-width: 1200px;
   --box-border-color: rgba(0, 0, 0, 0.2);
-  --highlight-bg: #eee:  
-  --break-s: 36rem;
-  --break-m: 48rem;
-  --break-l: 64rem;
-  --break-xl: 64rem;
+  --highlight-bg: #eee; 
 }
 
 *,
@@ -1080,7 +1076,7 @@ color: var(--main-bg-color);
 }
 
 .mr-details summary:before {
-  color: var(--main-bg-olor);
+  color: var(--main-bg-color);
     transition: 0.2s;
   content: '\203A'; /* chevron */
   font-size: 1.6rem;
@@ -1237,7 +1233,7 @@ font-size: 1.2rem
   color: var(--alert-color);
 }
 
-@media only screen and (min-width: var(--break-s)) {
+@media (min-width: 36em) {
 
   /*Grid*/
 
@@ -1319,7 +1315,7 @@ font-size: 1.2rem
 
 }
 
-@media only screen and (min-width: var(--break-m)) {
+@media (min-width: 48em) {
 	
 	  /*Grid*/
 
@@ -1650,7 +1646,7 @@ font-size: 1.2rem
 
 }
 
-@media only screen and (min-width: var(--break-l)) {
+@media (min-width: 64em) {
 
   .col-l-1 {
     flex: 0 0 8.33%;
@@ -1715,7 +1711,7 @@ font-size: 1.2rem
 
 }
 
-@media only screen and (min-width: var(--break-xl)) {
+@media (min-width: 72em) {
 
   .col-xl-1 {
     flex: 0 0 8.33%;
