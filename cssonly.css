@@ -1,4 +1,4 @@
-/*CSSonly UI 1.1.1*/
+/*CSSonly UI 1.1.2*/
 
 :root {
   --main-color: #003f6b;
@@ -858,15 +858,26 @@ input[type=reset] {
 /*Card*/
 
 .card {
-  min-height: 100%;
-  display: flex;
-  flex-direction: column;
-  gap: var(--spacing);
-padding: var(--spacing-l);
-  align-items: stretch;
-  box-shadow: 0 4px 8px 0 var(--box-border-color);
-  border-radius: var(--border-radius);
-  overflow: hidden
+    display: flex;
+    flex-direction: column;
+    padding: var(--spacing-l);
+    box-shadow: 0 4px 8px 0 var(--box-border-color);
+    border-radius: var(--border-radius);
+    overflow: hidden;
+}
+
+.card-list {
+    flex: 0 0 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.card-list > [class*="col-"] {
+    display: flex;
+}
+
+.card-list .card {
+    width: 100%;
 }
 
 .card-header {
